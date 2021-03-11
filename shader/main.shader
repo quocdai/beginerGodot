@@ -4,5 +4,5 @@ uniform vec4 color:hint_color;
 
 void fragment(){
 	COLOR.rgb = color.rgb;
-	COLOR.a = textture(TEXTURE,UV).a;
+	COLOR.a = texture(TEXTURE,UV).a;
 }
