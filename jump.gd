@@ -14,6 +14,6 @@ func _on_jumper_area_entered(area):
 	velocity = Vector2.ZERO
 func _physics_process(delta):
 	if target:
-		transform = target.orbit_posiion.global_transform
+		transform = target.orbit_position.global_transform
 	else:
 		position += velocity * delta

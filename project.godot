@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Circle"
-run/main_scene="res://Circle.tscn"
+run/main_scene="res://Home.tscn"
 config/icon="res://icon.png"
 
 [display]
