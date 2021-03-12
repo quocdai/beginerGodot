@@ -4,8 +4,6 @@ onready var orbit_position = $Pivot/OrbitPosition
 var radius = 100
 var rotation_speed = PI
 
-func _ready():
-	init()
 	
 func init(_position,_radius=radius):
 	position=_position

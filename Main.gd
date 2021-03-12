@@ -13,7 +13,7 @@ func new_game():
 	player.position  = $StartPosition.position
 	add_child(player)
 	player.connect("captured",self,"_on_Jumper_captured")
-	spawn_circle($SStartPosition.position)
+	spawn_circle($StartPosition.position)
 func spawn_circle(_position=null):
 	var c = Circle.instance()
 	if ! _position:
