@@ -1,5 +1,5 @@
 extends Area2D
-signal capured
+signal captured
 var velocity = Vector2(100,0)
 var jump_speed = 1000;
 var target = null

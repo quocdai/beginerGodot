@@ -6,7 +6,7 @@
 script = ExtResource( 1 )
 
 [node name="StartPosition" type="Position2D" parent="."]
-position = Vector2( 245.946, 417.923 )
+position = Vector2( 193.946, 633.923 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 241.558, 415.31 )
