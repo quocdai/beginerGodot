@@ -1,7 +1,7 @@
 extends Area2D
 signal captured
 var velocity = Vector2(100,0)
-var jump_speed = 1000;
+var jump_speed = 1000
 var target = null
 func _unhandled_input(event):
 	if target and event is InputEventScreenTouch and event.pressed:
