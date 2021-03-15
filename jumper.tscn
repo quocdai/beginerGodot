@@ -17,4 +17,8 @@ texture = ExtResource( 1 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1
 polygon = PoolVector2Array( 13.25, -2.375, 29.25, 5.75, -14.625, 28.875, -2.875, 6, -13.375, -14.875, -12.375, -15.375 )
+
+[node name="Trail" type="Node" parent="."]
+
+[node name="Points" type="Line2D" parent="Trail"]
 [connection signal="area_entered" from="." to="." method="_on_jumper_area_entered"]

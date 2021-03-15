@@ -9,7 +9,7 @@ script = ExtResource( 1 )
 position = Vector2( 219.144, 689.962 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 296.187, 633.464 )
+position = Vector2( -251.813, 1065.46 )
 offset = Vector2( 0, -200 )
 current = true
 smoothing_enabled = true
