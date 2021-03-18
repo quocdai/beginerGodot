@@ -1,10 +1,9 @@
 extends Area2D
 onready var orbit_position = $Pivot/OrbitPosition
-
+onready var tween = get_node("Tween")
 
 var radius = 100
 var rotation_speed = PI
-
 	
 func init(_position,_radius=radius):
 	position=_position
@@ -17,3 +16,8 @@ func init(_position,_radius=radius):
 	rotation_speed *= pow(-1,randi())
 func _process(delta):
 	$Pivot.rotation += rotation_speed * delta
+func _ready():
+	self.scale = Vector2.ZERO
+	print("ready")
+	tween.interpolate_property(self,"transform/scale",Vector2(1,1),Vector2(1.5,1.5),1.5,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	tween.start()

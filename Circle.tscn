@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/images/circle1_n.png" type="Texture" id=1]
 [ext_resource path="res://Circle.tres" type="Shape2D" id=2]
@@ -8,22 +8,6 @@
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-
-[sub_resource type="Animation" id=3]
-resource_name = "implode"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 15.4, 1333.8, 2153 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
-}
 
 [node name="Circle" type="Area2D"]
 position = Vector2( -0.234985, -4.22147 )
@@ -45,6 +29,4 @@ rotation = -1.24566
 position = Vector2( 150, 0 )
 rotation = 0.0131418
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/implode = SubResource( 3 )
-next/implode = "implode"
+[node name="Tween" type="Tween" parent="."]
