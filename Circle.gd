@@ -16,8 +16,17 @@ func init(_position,_radius=radius):
 	rotation_speed *= pow(-1,randi())
 func _process(delta):
 	$Pivot.rotation += rotation_speed * delta
-func _ready():
-	self.scale = Vector2.ZERO
-	print("ready")
-	tween.interpolate_property(self,"transform/scale",Vector2(1,1),Vector2(1.5,1.5),1.5,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
-	tween.start()
+func _draw():
+	if jumper:
+		var r = ((radius - 50) / num_orbits) * (1 + num_orbits - current)
+		draw_circle_arc_poly(Vector2.ZERO,r+10,orbit_start + PI/2,$Pivot.rotation,color(1,0,0))
+		
+func draw_circle_arc_poly(center, radius, angle_from, angle_to,color):
+	var nb_points = 32
+	var points_arc = PoolVector2Array()
+	points_arc.push_back(center)
+	var colors = PoolColorArray([color])
+	for i in range(nb_points + 1):
+		var angle_point = deg2rad(angle_from + i * (angle_to - angle_from) / nb_points - 90)
+		points_arc.push_back(center + Vector2(cos(angle_point), sin(angle_point)) * radius)
+	draw_polygon(points_arc,colors)
