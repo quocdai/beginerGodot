@@ -1,7 +1,7 @@
 extends Area2D
 
 signal captured
-
+signal died
 onready var trail = $Trail/Points
 
 var velocity = Vector2(100, 0)
@@ -39,4 +39,5 @@ func die():
 
 func _on_VisibilityNotifier2D_screen_exited():
 	if !target:
+		emit_signal("died")
 		die()
