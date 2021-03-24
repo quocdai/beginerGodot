@@ -7,7 +7,7 @@ enum MODES {STATIC, LIMITED}
 var radius = 100
 var rotation_speed = PI
 var mode = MODES.STATIC
-var move_range = 100
+var move_range = 0
 var move_speed = 1.0
 var num_orbits = 3
 var current_orbits = 0
@@ -81,7 +81,7 @@ func capture(target):
 func _draw():
 	if jumper:
 		var r = ((radius - 50) / num_orbits) * (1 + num_orbits - current_orbits)
-		draw_circle_arc_poly(Vector2.ZERO, r, orbit_start + PI/2,$Pivot.rotation + PI/2, Settings.theme["circle_fill"])												
+		draw_circle_arc_poly(Vector2.ZERO, r, orbit_start + PI/2,$Pivot.rotation + PI/2, settings.theme["circle_fill"])												
 func draw_circle_arc_poly(center, radius, angle_from, angle_to, color):
 	var nb_points = 32
 	var points_arc = PoolVector2Array()
