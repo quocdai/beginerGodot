@@ -17,11 +17,15 @@ func jump():
 	target.implode()
 	target = null
 	velocity = transform.x * jump_speed
+	if Settings.enable_sound:
+		$Jump.play()
 
 func _on_Jumper_area_entered(area):
 	target = area
 	velocity = Vector2.ZERO
 	emit_signal("captured", area)
+	if Settings.enable_sound:
+		$Capture.play()
 	
 func _physics_process(delta):
 	if trail.points.size() > trail_length:
@@ -41,3 +45,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 	if !target:
 		emit_signal("died")
 		die()
+func _ready():
+	$Sprite.material.set_shader_param("color",Settings.theme["player_body"])
+	$Trail/Points.default_color = Settings.theme["player_trail"]

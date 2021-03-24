@@ -4,11 +4,13 @@ var Circle = preload("res://objects/Circle.tscn")
 var Jumper = preload("res://objects/Jumper.tscn")
 
 var player
-
+var score = 0
 func _ready():
 	randomize()
-	print("startGame")
+	$HUB.hide()
 func new_game():
+	score = 0
+	$HUB.update_score(score)
 	$Camera2D.position = $StartPosition.position
 	player = Jumper.instance()
 	player.position = $StartPosition.position
@@ -16,7 +18,10 @@ func new_game():
 	player.connect("captured", self, "_on_Jumper_captured")
 	player.connect("died",self,"_on_Jumper_died")
 	spawn_circle($StartPosition.position)
-	
+	$HUB.show()
+	$HUB.show_message("")
+	if Settings.enable_music:
+		$Music.play()
 func spawn_circle(_position=null):
 	var c = Circle.instance()
 	if !_position:
@@ -30,6 +35,11 @@ func _on_Jumper_captured(object):
 	$Camera2D.position = object.position
 	object.capture(player)
 	call_deferred("spawn_circle")
+	score +=1
+	$HUB.update_score(score)
 func _on_Jumper_died():
 	get_tree().call_group("circles","implode")
 	$Screens.game_over()
+	$HUB.hide()
+	if Settings.enable_music:
+		$Music.stop()
