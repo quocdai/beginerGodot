@@ -22,7 +22,7 @@ func new_game():
 	spawn_circle($StartPosition.position)
 	$HUB.show()
 	$HUB.show_message("")
-	if Settings.enable_music:
+	if settings.enable_music:
 		$Music.play()
 func spawn_circle(_position=null):
 	var c = Circle.instance()
@@ -41,12 +41,12 @@ func _on_Jumper_captured(object):
 func set_score(value):
 	score = value
 	$HUB.update_score(score)
-	if score > 0 and score % Settings.circles_per_level == 0:
+	if score > 0 and score % settings.circles_per_level == 0:
 		level +=1
 		$HUB.show_message("Level %s" % str(level))
 func _on_Jumper_died():
 	get_tree().call_group("circles","implode")
 	$Screens.game_over()
 	$HUB.hide()
-	if Settings.enable_music:
+	if settings.enable_music:
 		$Music.stop()

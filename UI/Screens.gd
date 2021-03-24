@@ -16,7 +16,7 @@ func register_buttons():
 		button.connect("pressed",self,"_on_button_pressed",[button])
 		
 func _on_button_pressed(button):
-	if Settings.enable_sound:
+	if settings.enable_sound:
 		$Click.play()
 	match button.name:
 		"Home":
@@ -28,10 +28,10 @@ func _on_button_pressed(button):
 		"Settings":
 			change_screen($SettingsScreen)
 		"Sound":
-			Settings.enable_sound = !Settings.enable_sound
+			settings.enable_sound = !Settings.enable_sound
 			button.texture_normal = sound_buttons[Settings.enable_sound]
 		"Music":
-			Settings.enable_music = !Settings.enable_music
+			settings.enable_music = !Settings.enable_music
 			button.texture_normal = music_buttons[Settings.enable_music]
 func change_screen(new_screen):
 	if current_screen:

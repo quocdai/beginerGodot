@@ -24,4 +24,3 @@ smoothing_speed = 8.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-[connection signal="start_game" from="Screens" to="." method="new_game"]

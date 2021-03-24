@@ -14,10 +14,17 @@ var current_orbits = 0
 var orbit_start = null
 var jumper = null
 
-func init(_position, _radius=radius, _mode=MODES.LIMITED):
+func init(_position, level=1):
+	vảar _mode = settings.rand_weighted([10, level-1])
 	set_mode(_mode)
 	position = _position
-	radius = _radius
+	var move_chance = clamp(level-10,0,9) / 10.0
+	if randf() < move_chance:
+		move_range = max (25,100 * rand_range(0.75,1.25) * move_change) * pow(-1,randi() % 2)
+		move_speed = max (2.5 - ceil(level/5)*0.25,0.75)
+	var small_change = min(0.9,max(0,(level-10) / 20.0))
+	if randf() < small_changce:
+		radius  = max(50,radius - level * rand_range(0.25,1.25))
 	$Sprite.material = $Sprite.material.duplicate()
 	$SpriteEffect.material = $Sprite.material
 	$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()
@@ -34,12 +41,12 @@ func set_mode(_mode):
 	match mode:
 		MODES.STATIC:
 			$Label.hide()
-			color = Settings.theme["circle_static"]
+			color = settings.theme["circle_static"]
 		MODES.LIMITED:
 			current_orbits = num_orbits
 			$Label.text = str(current_orbits)
 			$Label.show()
-			color = Settings.theme["circle_limited"]
+			color = settings.theme["circle_limited"]
 	$Sprite.material.set_shader_param("color",color)
 			
 func _process(delta):
@@ -51,7 +58,7 @@ func _process(delta):
 func check_orbits():
 	if abs($Pivot.rotation - orbit_start) > 2 * PI:
 		current_orbits -= 1
-		if Settings.enable_sound:
+		if settings.enable_sound:
 			$Beep.play()
 		$Label.text = str(current_orbits)
 		if current_orbits <= 0:
