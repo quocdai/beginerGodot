@@ -28,11 +28,11 @@ func _on_button_pressed(button):
 		"Settings":
 			change_screen($SettingsScreen)
 		"Sound":
-			settings.enable_sound = !Settings.enable_sound
-			button.texture_normal = sound_buttons[Settings.enable_sound]
+			settings.enable_sound = !settings.enable_sound
+			button.texture_normal = sound_buttons[settings.enable_sound]
 		"Music":
-			settings.enable_music = !Settings.enable_music
-			button.texture_normal = music_buttons[Settings.enable_music]
+			settings.enable_music = !settings.enable_music
+			button.texture_normal = music_buttons[settings.enable_music]
 func change_screen(new_screen):
 	if current_screen:
 		current_screen.disappear()

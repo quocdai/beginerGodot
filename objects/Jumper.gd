@@ -46,5 +46,5 @@ func _on_VisibilityNotifier2D_screen_exited():
 		emit_signal("died")
 		die()
 func _ready():
-	$Sprite.material.set_shader_param("color",Settings.theme["player_body"])
-	$Trail/Points.default_color = Settings.theme["player_trail"]
+	$Sprite.material.set_shader_param("color",settings.theme["player_body"])
+	$Trail/Points.default_color = settings.theme["player_trail"]
