@@ -2,6 +2,7 @@ extends Area2D
 
 signal captured
 signal died
+
 onready var trail = $Trail/Points
 
 var velocity = Vector2(100, 0)
@@ -9,6 +10,13 @@ var jump_speed = 1000
 var target = null
 var trail_length = 25
 
+func _ready():
+	$Sprite.material.set_shader_param("color", settings.theme["player_body"])
+	var trail_color = settings.theme["player_trail"]
+	trail.gradient.set_color(1, trail_color)
+	trail_color.a = 0
+	trail.gradient.set_color(0, trail_color)
+	
 func _unhandled_input(event):
 	if target and event is InputEventScreenTouch and event.pressed:
 		jump()
@@ -45,6 +53,3 @@ func _on_VisibilityNotifier2D_screen_exited():
 	if !target:
 		emit_signal("died")
 		die()
-func _ready():
-	$Sprite.material.set_shader_param("color",settings.theme["player_body"])
-	$Trail/Points.default_color = settings.theme["player_trail"]

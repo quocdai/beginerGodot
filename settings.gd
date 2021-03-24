@@ -2,6 +2,7 @@ extends Node
 
 var enable_sound = true
 var enable_music = true
+
 var circles_per_level = 5
 
 var color_schemes = {
@@ -37,8 +38,16 @@ static func rand_weighted(weights):
 	var sum = 0
 	for weight in weights:
 		sum += weight
-	var num = rand_range(0,sum)
+	var num = rand_range(0, sum)
 	for i in weights.size():
 		if num < weights[i]:
 			return i
 		num -= weights[i]
+		
+		
+	
+	
+		
+		
+	
+	

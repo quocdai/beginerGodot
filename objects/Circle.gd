@@ -104,3 +104,4 @@ func set_tween(object=null, key=null):
 				position.x, position.x + move_range,
 				move_speed, Tween.TRANS_QUAD, Tween.EASE_IN_OUT)
 	move_tween.start()
+
