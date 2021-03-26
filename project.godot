@@ -20,16 +20,12 @@ modules="org/godotengine/godot/GodotAdMob"
 [application]
 
 config/name="circle_jump"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 settings="*res://settings.gd"
-
-[debug]
-
-gdscript/warnings/unused_argument=false
 
 [display]
 
@@ -45,9 +41,4 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
-quality/intended_usage/framebuffer_allocation=0
-quality/intended_usage/framebuffer_allocation.mobile=0
-vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"
-quality/dynamic_fonts/use_oversampling=false
