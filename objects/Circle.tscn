@@ -1,13 +1,17 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://objects/Circle.gd" type="Script" id=1]
-[ext_resource path="res://objects/color.shader" type="Shader" id=2]
-[ext_resource path="res://assets/images/circle1_n.png" type="Texture" id=3]
+[ext_resource path="res://objects/circle_glow.shader" type="Shader" id=2]
+[ext_resource path="res://assets/images/circle_1.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/audio/89.ogg" type="AudioStream" id=5]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
+shader_param/color = Color( 0.266667, 1, 0, 1 )
+shader_param/speed = 0.0
+shader_param/radius = 0.282
+shader_param/width = 0.135
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 128.501
@@ -23,10 +27,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("SpriteEffect:scale")
@@ -47,7 +51,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.46 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.560784 ) ]
@@ -94,12 +98,14 @@ material = SubResource( 1 )
 texture = ExtResource( 3 )
 
 [node name="SpriteEffect" type="Sprite" parent="."]
-self_modulate = Color( 1, 1, 1, 0 )
+visible = false
+self_modulate = Color( 1, 1, 1, 0.51202 )
 material = SubResource( 1 )
-scale = Vector2( 3, 3 )
+scale = Vector2( 0.480009, 0.480009 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 2 )
 
 [node name="Pivot" type="Node2D" parent="."]

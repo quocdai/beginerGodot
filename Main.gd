@@ -5,13 +5,16 @@ var Jumper = preload("res://objects/Jumper.tscn")
 
 var player
 var score = 0 setget set_score
+var highscore = 0
 var level = 0
 
 func _ready():
 	randomize()
+	load_score()
 	$HUD.hide()
 	
 func new_game():
+	settings.hide_ad_banner()
 	self.score = 0
 	level = 1
 	$HUD.update_score(score)
@@ -31,7 +34,7 @@ func spawn_circle(_position=null):
 	var c = Circle.instance()
 	if !_position:
 		var x = rand_range(-150, 150)
-		var y = rand_range(-550, -450)
+		var y = rand_range(-500, -400)
 		_position = player.target.position + Vector2(x, y)
 	add_child(c)
 	c.init(_position, level)
@@ -50,9 +53,29 @@ func set_score(value):
 		$HUD.show_message("Level %s" % str(level))
 	
 func _on_Jumper_died():
+	if score > highscore:
+		highscore = score
+		save_score()
 	get_tree().call_group("circles", "implode")
-	$Screens.game_over()
+	$Screens.game_over(score, highscore)
 	$HUD.hide()
 	if settings.enable_music:
 		$Music.stop()
-	
+	settings.show_ad_interstitial()
+
+func load_score():
+	var f = File.new()
+	if f.file_exists(settings.score_file):
+		f.open(settings.score_file, File.READ)
+		highscore = f.get_var()
+		f.close()
+		
+func save_score():
+	var f = File.new()
+	f.open(settings.score_file, File.WRITE)
+	f.store_var(highscore)
+	f.close()
+
+
+
+
