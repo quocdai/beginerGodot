@@ -19,7 +19,7 @@ modules="org/godotengine/godot/GodotAdMob"
 [application]
 
 config/name="circle_jump"
-run/main_scene="res://Jumper.tscn"
+run/main_scene="res://Circle.tscn"
 
 [display]
 
