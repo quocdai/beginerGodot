@@ -13,10 +13,14 @@ _global_script_class_icons={
 
 }
 
+[android]
+
+modules="org/godotengine/godot/GodotAdMob"
+
 [application]
 
 config/name="circle_jump"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -34,7 +38,3 @@ window/stretch/aspect="keep"
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
