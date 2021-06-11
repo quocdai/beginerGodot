@@ -20,8 +20,8 @@ func _process(delta):
 	
 func implode():
 	$AnimationPlayer.play("implode")
-	yield($AnimationPlayer, "animation_finished")
+#	yield($AnimationPlayer, "animation_finished")
 	queue_free()
 	
-func capture():
-	$AnimationPlayer.play("capture")
+#func capture():
+#	$AnimationPlayer.play("capture")
