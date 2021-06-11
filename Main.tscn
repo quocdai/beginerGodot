@@ -14,3 +14,10 @@ offset = Vector2( 0, -200 )
 current = true
 smoothing_enabled = true
 smoothing_speed = 8.0
+
+[node name="Label" type="Label" parent="Camera2D"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
