@@ -12,7 +12,6 @@ func _unhandled_input(event):
 		jump()
 		
 func jump():
-	#target.implode()
 	target = null
 	velocity = transform.x * jump_speed
 
