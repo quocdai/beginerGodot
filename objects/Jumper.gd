@@ -4,13 +4,12 @@ signal captured
 
 
 var velocity = Vector2(100, 0)
-var jump_speed = 1000
+var jump_speed = 500
 var target = null
 
 func _unhandled_input(event):
 	if target and event is InputEventScreenTouch and event.pressed:
 		jump()
-		
 func jump():
 	target = null
 	velocity = transform.x * jump_speed

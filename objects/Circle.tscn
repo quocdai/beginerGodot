@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/Circle.gd" type="Script" id=1]
 [ext_resource path="res://objects/color.shader" type="Shader" id=2]
@@ -10,6 +10,13 @@ shader_param/color = Color( 0.266667, 1, 0, 1 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 128.501
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = SubResource( 3 )
 
 [node name="Circle" type="Area2D"]
 script = ExtResource( 1 )
@@ -30,3 +37,16 @@ shape = SubResource( 2 )
 [node name="Pivot" type="Node2D" parent="."]
 
 [node name="OrbitPosition" type="Position2D" parent="Pivot"]
+
+[node name="Content" type="Label" parent="."]
+margin_left = -43.438
+margin_top = -66.7462
+margin_right = 36.562
+margin_bottom = 53.2538
+custom_fonts/font = SubResource( 4 )
+text = "A"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
