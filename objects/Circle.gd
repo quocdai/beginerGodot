@@ -2,7 +2,7 @@ extends Area2D
 
 onready var orbit_position = $Pivot/OrbitPosition
 var chars = ["A","B","C","D","E","F","G","H","I","J","K","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var radius = 100
+var radius = rand_range(80, 100)
 var rotation_speed = PI
 var count=0
 

@@ -15,7 +15,7 @@ radius = 128.501
 font_path = "res://assets/fonts/Xolonium-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=4]
-size = 100
+size = 80
 font_data = SubResource( 3 )
 
 [node name="Circle" type="Area2D"]
@@ -39,9 +39,9 @@ shape = SubResource( 2 )
 [node name="OrbitPosition" type="Position2D" parent="Pivot"]
 
 [node name="Content" type="Label" parent="."]
-margin_left = -43.438
+margin_left = -42.3785
 margin_top = -66.7462
-margin_right = 36.562
+margin_right = 37.6215
 margin_bottom = 53.2538
 custom_fonts/font = SubResource( 4 )
 text = "A"
