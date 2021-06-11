@@ -18,10 +18,10 @@ func init(_position, _radius=radius):
 func _process(delta):
 	$Pivot.rotation += rotation_speed * delta
 	
-func implode():
-	$AnimationPlayer.play("implode")
+#func implode():
+#	$AnimationPlayer.play("implode")
 #	yield($AnimationPlayer, "animation_finished")
-	queue_free()
+	#queue_free()
 	
 #func capture():
 #	$AnimationPlayer.play("capture")
