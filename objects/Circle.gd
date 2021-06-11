@@ -15,6 +15,9 @@ func init(_position, _count):
 	$Sprite.scale = Vector2(1, 1) * radius / img_size
 	orbit_position.position.x = radius + 25
 	rotation_speed *= pow(-1, randi() % 2)
-	$Content.text = chars[count]
+	if count<chars.size():
+		$Content.text = chars[count]
+	else :
+		count=0
 func _process(delta):
 	$Pivot.rotation += rotation_speed * delta
