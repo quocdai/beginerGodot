@@ -4,7 +4,7 @@ var Circle = preload("res://objects/Circle.tscn")
 var Jumper = preload("res://objects/Jumper.tscn")
 
 var player
-var count=0
+var count=-1
 func _ready():
 	randomize()
 	new_game()

@@ -1,8 +1,9 @@
 extends Area2D
 
 onready var orbit_position = $Pivot/OrbitPosition
+export onready var links=["res://assets/imagesNew/1.png","res://assets/imagesNew/2.png","res://assets/imagesNew/3.png"]
 var chars = ["A","B","C","D","E","F","G","H","I","J","K","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var radius = rand_range(80, 100)
+var radius = 100
 var rotation_speed = PI
 var count=0
 
@@ -15,6 +16,8 @@ func init(_position, _count):
 	$Sprite.scale = Vector2(1, 1) * radius / img_size
 	orbit_position.position.x = radius + 25
 	rotation_speed *= pow(-1, randi() % 2)
+	
+	$Sprite.texture = load(links[rand_range(0, 2)])
 	if count<chars.size():
 		$Content.text = chars[count]
 	else :
