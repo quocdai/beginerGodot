@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="alphabet_jump"
+config/name="circle_jump"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
@@ -33,5 +33,4 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-environment/default_clear_color=Color( 0.301961, 0.301961, 0.301961, 1 )
 environment/default_environment="res://default_env.tres"
