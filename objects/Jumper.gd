@@ -28,7 +28,6 @@ func _physics_process(delta):
 		position += velocity * delta
 		
 func die():
-	
 	target = null
 	queue_free()
 
