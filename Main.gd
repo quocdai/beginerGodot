@@ -4,6 +4,7 @@ var Circle = preload("res://objects/Circle.tscn")
 var Jumper = preload("res://objects/Jumper.tscn")
 
 var player
+var count=-1
 
 func _ready():
 	randomize()
@@ -24,7 +25,8 @@ func spawn_circle(_position=null):
 		var y = rand_range(-500, -400)
 		_position = player.target.position + Vector2(x, y)
 	add_child(c)
-	c.init(_position)
+	count +=1
+	c.init(_position,count)
 	
 func _on_Jumper_captured(object):
 	$Camera2D.position = object.position
