@@ -17,7 +17,7 @@ var count =0
 func init(_position,_count, _radius=radius, _mode=MODES.LIMITED):
 	set_mode(_mode)
 	position = _position
-	radius = _radius
+	#radius = _radius
 	count = _count
 	$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()
 	$CollisionShape2D.shape.radius = radius
