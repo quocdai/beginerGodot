@@ -25,12 +25,6 @@ script = ExtResource( 1 )
 material = SubResource( 1 )
 texture = ExtResource( 3 )
 
-[node name="SpriteEffect" type="Sprite" parent="."]
-self_modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 1 )
-scale = Vector2( 3, 3 )
-texture = ExtResource( 3 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
