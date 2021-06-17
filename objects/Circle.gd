@@ -21,8 +21,6 @@ func init(_position,_count, _radius=radius, _mode=MODES.LIMITED):
 	count = _count
 	$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()
 	$CollisionShape2D.shape.radius = radius
-	var img_size = $Sprite.texture.get_size().x / 2
-	$Sprite.scale = Vector2(1, 1) * radius / img_size
 	orbit_position.position.x = radius + 25
 	rotation_speed *= pow(-1, randi() % 2)
 	$Sprite.texture = load(links[rand_range(0, 3)])

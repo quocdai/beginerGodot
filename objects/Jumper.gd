@@ -6,7 +6,6 @@ signal died
 var velocity = Vector2(100, 0)
 var jump_speed = 1000
 var target = null
-var trail_length = 25
 
 func _unhandled_input(event):
 	if target and event is InputEventScreenTouch and event.pressed:
