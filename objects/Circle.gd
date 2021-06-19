@@ -7,7 +7,7 @@ enum MODES {STATIC, LIMITED}
 var radius = 100
 var rotation_speed = PI
 var mode = MODES.STATIC
-var num_orbits = 5
+var num_orbits = 5 
 var current_orbits = 0
 var orbit_start = null
 var jumper = null
@@ -36,7 +36,7 @@ func set_mode(_mode):
 			$Label.hide()
 		MODES.LIMITED:
 			current_orbits = num_orbits
-			$Label.text = str(current_orbits)
+		#	$Label.text = str(current_orbits)
 			$Label.show()
 			
 func _process(delta):
@@ -48,7 +48,7 @@ func _process(delta):
 func check_orbits():
 	if abs($Pivot.rotation - orbit_start) > 2 * PI:
 		current_orbits -= 1
-		$Label.text = str(current_orbits)
+		#$Label.text = str(current_orbits)
 		if current_orbits <= 0:
 			jumper.die()
 			jumper = null
