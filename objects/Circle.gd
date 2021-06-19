@@ -7,7 +7,7 @@ enum MODES {STATIC, LIMITED}
 var radius = 100
 var rotation_speed = PI
 var mode = MODES.STATIC
-var num_orbits = 3
+var num_orbits = 5
 var current_orbits = 0
 var orbit_start = null
 var jumper = null
