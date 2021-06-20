@@ -19,6 +19,8 @@ func new_game():
 	player.connect("died", self, "_on_Jumper_died")
 	spawn_circle($StartPosition.position)
 	$HUB.show()
+	if Settings.enable_music:
+		$Music.play()
 	
 func spawn_circle(_position=null):
 	var c = Circle.instance()

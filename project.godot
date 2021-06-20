@@ -19,6 +19,10 @@ config/name="Abc jump"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Settings="*res://settings.gd"
+
 [display]
 
 window/size/width=480

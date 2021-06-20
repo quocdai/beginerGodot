@@ -15,11 +15,15 @@ func jump():
 	target.implode()
 	target = null
 	velocity = transform.x * jump_speed
+	if Settings.enable_sound:
+		$Jump.play();
 
 func _on_Jumper_area_entered(area):
 	target = area
 	velocity = Vector2.ZERO
 	emit_signal("captured",area)
+	if Settings.enable_sound:
+		$Capture.play()
 	
 func _physics_process(delta):
 	if target:

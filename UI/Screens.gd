@@ -14,6 +14,8 @@ func register_buttons():
 		button.connect("pressed", self, "_on_button_pressed", [button.name])
 
 func _on_button_pressed(name):
+	if Settings.enable_sound:
+		$click.play()
 	match name:
 		"Home":
 			change_screen($TitleScreen)

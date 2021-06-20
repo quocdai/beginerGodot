@@ -49,6 +49,8 @@ func check_orbits():
 	if abs($Pivot.rotation - orbit_start) > 2 * PI:
 		current_orbits -= 1
 		#$Label.text = str(current_orbits)
+		if Settings.enable_sound:
+			$Beep.play()
 		if current_orbits <= 0:
 			jumper.die()
 			jumper = null
