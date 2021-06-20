@@ -8,6 +8,7 @@ var count=-1
 
 func _ready():
 	randomize()
+	$HUB.hide()
 	
 func new_game():
 	$Camera2D.position = $StartPosition.position
@@ -17,6 +18,7 @@ func new_game():
 	player.connect("captured", self, "_on_Jumper_captured")
 	player.connect("died", self, "_on_Jumper_died")
 	spawn_circle($StartPosition.position)
+	$HUB.show()
 	
 func spawn_circle(_position=null):
 	var c = Circle.instance()
@@ -27,6 +29,7 @@ func spawn_circle(_position=null):
 	add_child(c)
 	count +=1
 	c.init(_position,count)
+	$HUB.update_score(count)
 	
 func _on_Jumper_captured(object):
 	$Camera2D.position = object.position
@@ -36,4 +39,5 @@ func _on_Jumper_captured(object):
 func _on_Jumper_died():
 	get_tree().call_group("circles", "implode")
 	$Screens.game_over()
+	$HUB.hide()
 	
