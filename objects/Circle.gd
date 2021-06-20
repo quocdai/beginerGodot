@@ -36,7 +36,6 @@ func set_mode(_mode):
 			$Label.hide()
 		MODES.LIMITED:
 			current_orbits = num_orbits
-		#	$Label.text = str(current_orbits)
 			$Label.show()
 			
 func _process(delta):
@@ -48,7 +47,6 @@ func _process(delta):
 func check_orbits():
 	if abs($Pivot.rotation - orbit_start) > 2 * PI:
 		current_orbits -= 1
-		#$Label.text = str(current_orbits)
 		if Settings.enable_sound:
 			$Beep.play()
 		if current_orbits <= 0:
