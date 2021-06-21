@@ -5,7 +5,7 @@ var Jumper = preload("res://objects/Jumper.tscn")
 
 var player
 var count=-1
-
+var score = 0
 func _ready():
 	randomize()
 	$HUB.hide()
@@ -30,6 +30,7 @@ func spawn_circle(_position=null):
 		_position = player.target.position + Vector2(x, y)
 	add_child(c)
 	count +=1
+	score +=1
 	c.init(_position,count)
 	$HUB.update_score(count)
 	
