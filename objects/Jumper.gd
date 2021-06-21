@@ -6,10 +6,7 @@ signal died
 var velocity = Vector2(100, 0)
 var jump_speed = 1000
 var target = null
-var sound_buttons = {true:preload("res://assets/images/buttons/audioOn.png"),
-					false:preload("res://assets/images/buttons/audioOff.png")}
-var music_buttons = {true:preload("res://assets/images/buttons/musicOn.png"),
-					false:preload("res://assets/images/buttons/musicOff.png")}
+
 func _unhandled_input(event):
 	if target and event is InputEventScreenTouch and event.pressed:
 		jump()
