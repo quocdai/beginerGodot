@@ -3,11 +3,11 @@
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/HUB.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 50
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 50
 font_data = ExtResource( 1 )
 
@@ -38,7 +38,7 @@ alignment = 2
 margin_left = 170.0
 margin_right = 331.0
 margin_bottom = 61.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "score:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -48,5 +48,5 @@ __meta__ = {
 margin_left = 335.0
 margin_right = 440.0
 margin_bottom = 61.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "100"
