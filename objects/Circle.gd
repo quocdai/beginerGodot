@@ -24,8 +24,6 @@ func init(_position,_count, _radius=radius, _mode=MODES.LIMITED):
 	orbit_position.position.x = radius + 25
 	rotation_speed *= pow(-1, randi() % 2)
 	#$Sprite.texture = load(links[rand_range(0, 3)])
-	if count==chars.size():
-		count=0
 	$Label.text = chars[count]
 func set_mode(_mode):
 	mode = _mode

@@ -31,8 +31,10 @@ func spawn_circle(_position=null):
 	add_child(c)
 	count +=1
 	score +=1
+	if count==c.chars.size():
+		count=0
 	c.init(_position,count)
-	$HUB.update_score(count)
+	$HUB.update_score(score)
 	
 func _on_Jumper_captured(object):
 	$Camera2D.position = object.position
