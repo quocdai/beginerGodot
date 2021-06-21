@@ -25,6 +25,9 @@ func _on_button_pressed(name):
 			emit_signal("start_game")
 		"Settings":
 			change_screen($SettingsScreen)
+		"Sound":
+			Settings.enable_sound = !Settings.enable_sound
+			button.texture_normal = sound_buttons[Settings.enable_sound]
 
 func change_screen(new_screen):
 	if current_screen:
