@@ -44,7 +44,7 @@
             android:value="xr_mode_metadata_value" />
 	 <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7309647479407394/4615661883"/>
+            android:value="Abc jumpca-app-pub-7309647479407394~9404954135"/>
         <activity
             android:name=".GodotApp"
             android:label="@string/godot_project_name_string"

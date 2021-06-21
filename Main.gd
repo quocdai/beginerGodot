@@ -9,6 +9,7 @@ var score = 0
 func _ready():
 	randomize()
 	$HUB.hide()
+	$AdMob.load_interstitial()
 	
 func new_game():
 	$Camera2D.position = $StartPosition.position
@@ -21,7 +22,6 @@ func new_game():
 	$HUB.show()
 	if Settings.enable_music:
 		$Music.play()
-	
 func spawn_circle(_position=null):
 	var c = Circle.instance()
 	if !_position:
@@ -46,3 +46,8 @@ func _on_Jumper_died():
 	$Screens.game_over()
 	$HUB.hide()
 	
+
+
+func _on_Button_pressed():
+	print("call")
+	$AdMob.show_interstitial()

@@ -4,23 +4,6 @@
             "outputFile": "/home/quocdai/Desktop/godot/beginerGodot/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
             "map": [
                 {
-                    "source": "/home/quocdai/.gradle/caches/transforms-2/files-2.1/b18d4317199ce5fb053a0d52b1bbc75c/jetified-play-services-ads-19.1.0/res/values-ca/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "199,270,393,458,523,614,734",
-                        "endColumns": "70,122,64,64,90,119,72",
-                        "endOffsets": "269,392,457,522,613,733,806"
-                    },
-                    "to": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "362,437,564,633,702,797,921",
-                        "endColumns": "74,126,68,68,94,123,76",
-                        "endOffsets": "432,559,628,697,792,916,993"
-                    }
-                },
-                {
                     "source": "/home/quocdai/Desktop/godot/beginerGodot/android/build/res/values-ca/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
@@ -30,28 +13,11 @@
                         "endOffsets": "170"
                     },
                     "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "299",
-                        "endColumns": "62",
-                        "endOffsets": "357"
-                    }
-                },
-                {
-                    "source": "/home/quocdai/.gradle/caches/transforms-2/files-2.1/e5df49c1c3f6c08e72304aa03642d0bd/jetified-play-services-basement-17.0.0/res/values-ca/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "193",
-                        "endOffsets": "440"
-                    },
-                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "105",
-                        "endColumns": "193",
-                        "endOffsets": "294"
+                        "startOffsets": "55",
+                        "endColumns": "62",
+                        "endOffsets": "113"
                     }
                 },
                 {
@@ -64,11 +30,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "11",
+                        "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "998",
+                        "startOffsets": "118",
                         "endColumns": "100",
-                        "endOffsets": "1094"
+                        "endOffsets": "214"
                     }
                 }
             ]

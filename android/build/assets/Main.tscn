@@ -28,6 +28,16 @@ stream = ExtResource( 4 )
 
 [node name="AdMob" type="Node" parent="."]
 script = ExtResource( 5 )
-interstitial_id = "ca-app-pub-7309647479407394/4615661883"
+interstitial_id = "abcjumpca-app-pub-7309647479407394/4615661883"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 73.0204
+margin_top = 692.107
+margin_right = 420.02
+margin_bottom = 812.107
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="start_game" from="Screens" to="." method="new_game"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
