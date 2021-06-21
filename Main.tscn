@@ -28,6 +28,6 @@ stream = ExtResource( 4 )
 
 [node name="AdMob" type="Node" parent="."]
 script = ExtResource( 5 )
-banner_id = "ca-app-pub-7309647479407394/4615661883"
+interstitial_id = "ca-app-pub-7309647479407394/4615661883"
 
 [connection signal="start_game" from="Screens" to="." method="new_game"]
