@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "applicationId": "com.quocdai.abcjump",
+  "applicationId": "com.mabu.abcjump",
   "variantType": "BASE_APK",
   "elements": [
     {
@@ -19,7 +19,7 @@
       },
       "path": "resources-debug.ap_",
       "properties": {
-        "packageId": "com.quocdai.abcjump",
+        "packageId": "com.mabu.abcjump",
         "split": "",
         "minSdkVersion": "18"
       }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/quocdai/Desktop/godot/beginerGodot/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
+            "outputFile": "/home/mabu/Desktop/godot/Project/abc jump/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "/home/quocdai/Desktop/godot/beginerGodot/android/build/res/values-en/godot_project_name_string.xml",
+                    "source": "/home/mabu/Desktop/godot/Project/abc jump/android/build/res/values-en/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",

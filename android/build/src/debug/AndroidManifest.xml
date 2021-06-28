@@ -15,7 +15,7 @@
         android:name=".GodotInstrumentation"
         android:icon="@mipmap/icon"
         android:label="@string/godot_project_name_string"
-        android:targetPackage="com.quocdai.abcjump" />
+        android:targetPackage="com.mabu.abcjump" />
     <application android:label="@string/godot_project_name_string"
         android:allowBackup="false" tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:requestLegacyExternalStorage"         android:requestLegacyExternalStorage="false"

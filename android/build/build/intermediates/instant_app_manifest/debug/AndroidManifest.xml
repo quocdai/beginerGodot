@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.quocdai.abcjump"
+    package="com.mabu.abcjump"
     android:installLocation="auto"
     android:targetSandboxVersion="2"
     android:versionCode="1"
@@ -26,7 +26,7 @@
         android:name=".GodotInstrumentation"
         android:icon="@mipmap/icon"
         android:label="@string/godot_project_name_string"
-        android:targetPackage="com.quocdai.abcjump" />
+        android:targetPackage="com.mabu.abcjump" />
 
     <application
         android:allowBackup="false"

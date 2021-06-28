@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/quocdai/Desktop/godot/beginerGodot/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml",
+            "outputFile": "/home/mabu/Desktop/godot/Project/abc jump/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml",
             "map": [
                 {
-                    "source": "/home/quocdai/.gradle/caches/transforms-2/files-2.1/61f903db516e52d8783db3337e87ee1a/core-1.0.0/res/values-fa/values-fa.xml",
+                    "source": "/home/mabu/.gradle/caches/transforms-2/files-2.1/61f903db516e52d8783db3337e87ee1a/core-1.0.0/res/values-fa/values-fa.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/quocdai/Desktop/godot/beginerGodot/android/build/res/values-fa/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "59",
-                        "endOffsets": "170"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "62",
-                        "endOffsets": "113"
-                    }
-                },
-                {
-                    "source": "/home/quocdai/.gradle/caches/transforms-2/files-2.1/bc1e848ec22747470543ab6597f4376b/jetified-godot-lib.debug/res/values-fa/values-fa.xml",
+                    "source": "/home/mabu/.gradle/caches/transforms-2/files-2.1/bc1e848ec22747470543ab6597f4376b/jetified-godot-lib.debug/res/values-fa/values-fa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "219,273,347,405,465,534,604,782,955,1057,1136",
                         "endColumns": "53,73,57,59,68,69,177,172,101,78,70",
                         "endOffsets": "268,342,400,460,529,599,777,950,1052,1131,1202"
+                    }
+                },
+                {
+                    "source": "/home/mabu/Desktop/godot/Project/abc jump/android/build/res/values-fa/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "59",
+                        "endOffsets": "170"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "62",
+                        "endOffsets": "113"
                     }
                 }
             ]
