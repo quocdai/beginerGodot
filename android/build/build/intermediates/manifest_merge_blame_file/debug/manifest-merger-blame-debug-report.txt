@@ -89,11 +89,11 @@
 53            android:name="org.godotengine.editor.version"
 54            android:value="3.3.2.stable" />
 55        <meta-data
-55-->/home/mabu/Desktop/godot/Project/abc jump/android/build/AndroidManifest.xml:45:3-47:77
+55-->/home/mabu/Desktop/godot/Project/abc jump/android/build/AndroidManifest.xml:45:3-47:69
 56            android:name="com.google.android.gms.ads.APPLICATION_ID"
 56-->/home/mabu/Desktop/godot/Project/abc jump/android/build/AndroidManifest.xml:46:13-69
-57            android:value="Abc jumpca-app-pub-7309647479407394~9404954135" /> <!-- Records the version of the Godot library -->
-57-->/home/mabu/Desktop/godot/Project/abc jump/android/build/AndroidManifest.xml:47:13-75
+57            android:value="ca-app-pub-7309647479407394~9404954135" /> <!-- Records the version of the Godot library -->
+57-->/home/mabu/Desktop/godot/Project/abc jump/android/build/AndroidManifest.xml:47:13-67
 58        <meta-data
 58-->[godot-lib.debug.aar] /home/mabu/.gradle/caches/transforms-2/files-2.1/bc1e848ec22747470543ab6597f4376b/jetified-godot-lib.debug/AndroidManifest.xml:20:9-22:44
 59            android:name="org.godotengine.library.version"

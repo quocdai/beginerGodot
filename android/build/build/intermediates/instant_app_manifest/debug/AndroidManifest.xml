@@ -55,7 +55,7 @@
             android:value="3.3.2.stable" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="Abc jumpca-app-pub-7309647479407394~9404954135" /> <!-- Records the version of the Godot library -->
+            android:value="ca-app-pub-7309647479407394~9404954135" /> <!-- Records the version of the Godot library -->
         <meta-data
             android:name="org.godotengine.library.version"
             android:value="3.3.2.stable" />
