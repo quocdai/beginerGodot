@@ -48,6 +48,6 @@ func _on_Jumper_died():
 	
 
 
-func _on_Button_pressed():
-	print("call")
-	$AdMob.show_interstitial()
+#func _on_Button_pressed():
+#	print("call")
+#	$AdMob.show_interstitial()
